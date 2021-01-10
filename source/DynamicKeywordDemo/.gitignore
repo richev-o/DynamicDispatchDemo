@@ -1,0 +1,12 @@
+﻿**/.idea
+*.json
+*.exe
+*.dll
+*.pdb
+*.cache
+*.txt
+*.targets
+*.props
+*.info
+**/bin/**
+**/obj/**
