@@ -48,7 +48,7 @@ namespace DynamicDispatchDemo
 
         public void MethodToConstrainTypesPassedToDependency_WillFail()
         {
-            // the compiler is happy, but the runtime has no idea what the specific type of
+            // The compiler is happy, but the runtime has no idea what the specific type of
             // Model will be when the actual variable data is passed to this signature
             Dependency.MethodThatNeedsToKnowT(Model);
         }
@@ -65,7 +65,7 @@ namespace DynamicDispatchDemo
     {
         public static void MethodThatNeedsToKnowT<T>(T model) where T : IHaveSomeGeneralProperty
         {
-            if (typeof(T) == typeof(SpecificType)) // We only pass in ModelA here
+            if (typeof(T) == typeof(SpecificType))
             {
                 Console.WriteLine($"MethodThatNeedsToKnowT Result: Success! The type of T was found to be a specific type: {typeof(T)}");
             }
