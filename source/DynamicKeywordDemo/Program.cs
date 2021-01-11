@@ -71,7 +71,7 @@ namespace DynamicDispatchDemo
             }
             else
             {
-                throw new Exception($"MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be ModelA, but was {typeof(T)}");
+                throw new Exception($"MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be {typeof(DynamicDispatchDemo.SpecificType)}, but was {typeof(T)}");
             }
         }
     }

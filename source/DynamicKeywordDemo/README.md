@@ -33,6 +33,6 @@ If we don't cast the argument to (dynamic), the runtime does not use reflection.
 Below is an exception caused by the methods inability to infer the type of Model.
 
 Unhandled exception. System.Exception: MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should 
-be ModelA, but was DynamicDispatchDemo.IHaveSomeGeneralProperty
+be  DynamicDispatchDemo.SpecificType, but was DynamicDispatchDemo.IHaveSomeGeneralProperty
 ```
 
