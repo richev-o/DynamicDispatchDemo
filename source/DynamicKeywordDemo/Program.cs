@@ -21,7 +21,7 @@ namespace DynamicDispatchDemo
 
             Console.WriteLine("Example 2: Not Casting to dynamic.");
             Console.WriteLine();
-            Console.WriteLine("If we don't cast the argument to (dynamic), the runtime does not use reflection. Below is an exception caused by the methods inability to infer the type of Model.");
+            Console.WriteLine("If we don't cast the argument to (dynamic), the runtime does not use reflection. Below is an exception caused by the methods inability to infer the type of T model.");
             Console.WriteLine();
             classA.MethodToConstrainTypesPassedToDependency_WillFail();
         }
@@ -71,7 +71,7 @@ namespace DynamicDispatchDemo
             }
             else
             {
-                throw new Exception($"MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be {typeof(DynamicDispatchDemo.SpecificType)}, but was {typeof(T)}");
+                throw new Exception($"MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be {typeof(SpecificType)}, but was {typeof(T)}");
             }
         }
     }
