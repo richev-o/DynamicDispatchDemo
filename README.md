@@ -1,2 +1,2 @@
 # DynamicDispatchDemo
-A small project to explain how dynamic dispatch solves the problem of resolving a less derived type at runtime.
+A small repo to provide examples of how dynamic dispatch can be used to solve the problem of resolving types at runtime.
