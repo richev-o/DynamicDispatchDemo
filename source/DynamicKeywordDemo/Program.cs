@@ -6,16 +6,18 @@ namespace DynamicDispatchDemo
     {
         static void Main(string[] args)
         {
-            var modelA = new ModelA();
+            var modelA = new SpecificType();
             var classA = new SomeClass(modelA);
 
             Console.WriteLine();
-
-            classA.ConcealTheCallToControlWillPass();
+            Console.WriteLine("Example 1: Casting to dynamic.");
             Console.WriteLine("When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of Model from the variable metadata passed to the signature.");
+            classA.ConcealTheCallToControlWillPass();
             Console.WriteLine();
 
-            Console.WriteLine("Below is an exception caused by the methods inability to infer the type of Model.");
+            Console.WriteLine("Example 2: Not Casting to dynamic.");
+            Console.WriteLine("If we don't cast the argument to (dynamic), the runtime does not use reflection. Below is an exception caused by the methods inability to infer the type of Model.");
+            Console.WriteLine();
             classA.ConcealTheCallToControlWillFail();
         }
     }
@@ -25,7 +27,7 @@ namespace DynamicDispatchDemo
         public int Id { get; }
     }
 
-    public class ModelA : IHaveSomeGeneralProperty
+    public class SpecificType : IHaveSomeGeneralProperty
     {
         public int Id { get; set; }
     }
@@ -58,13 +60,13 @@ namespace DynamicDispatchDemo
     {
         public static void MethodThatNeedsToKnowT<T>(T model) where T : IHaveSomeGeneralProperty
         {
-            if (typeof(T) == typeof(ModelA))
+            if (typeof(T) == typeof(SpecificType)) // We only pass in ModelA here
             {
-                Console.WriteLine($"Success: The type of T was found to be a specific type: {typeof(T)}");
+                Console.WriteLine($"MethodThatNeedsToKnowT Result: Success! The type of T was found to be a specific type: {typeof(T)}");
             }
             else
             {
-                throw new Exception($"Fail: The type of T wasn't specific enough. It should be ModelA, but was {typeof(T)}");
+                throw new Exception($"MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be ModelA, but was {typeof(T)}");
             }
         }
     }
