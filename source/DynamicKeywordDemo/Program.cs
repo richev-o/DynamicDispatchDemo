@@ -10,7 +10,7 @@ namespace DynamicDispatchDemo
             var classA = new SomeClass(modelA);
 
             Console.WriteLine();
-            
+
             classA.ConcealTheCallToControlWillPass();
             Console.WriteLine("When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of Model from the variable metadata passed to the signature.");
             Console.WriteLine();
@@ -56,7 +56,7 @@ namespace DynamicDispatchDemo
 
     public static class Dependency
     {
-        public static void MethodThatNeedsToKnowT<T>(T model)
+        public static void MethodThatNeedsToKnowT<T>(T model) where T : IHaveSomeGeneralProperty
         {
             if (typeof(T) == typeof(ModelA))
             {
