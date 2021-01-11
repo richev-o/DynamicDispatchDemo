@@ -11,11 +11,17 @@ namespace DynamicDispatchDemo
 
             Console.WriteLine();
             Console.WriteLine("Example 1: Casting to dynamic.");
-            Console.WriteLine("When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of Model from the variable metadata passed to the signature.");
-            classA.ConcealTheCallToControlWillPass();
             Console.WriteLine();
-
+            Console.WriteLine("When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of Model from the variable metadata passed to the signature.");
+            Console.WriteLine();
+            classA.ConcealTheCallToControlWillPass();
+            
+            Console.WriteLine();
+            Console.WriteLine("-----------");
+            Console.WriteLine();
+            
             Console.WriteLine("Example 2: Not Casting to dynamic.");
+            Console.WriteLine();
             Console.WriteLine("If we don't cast the argument to (dynamic), the runtime does not use reflection. Below is an exception caused by the methods inability to infer the type of Model.");
             Console.WriteLine();
             classA.ConcealTheCallToControlWillFail();

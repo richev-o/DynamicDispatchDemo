@@ -19,12 +19,20 @@ This small program simply writes a few lines to stdout and throws an exception w
 Expected output:
 ```
 Example 1: Casting to dynamic.
-When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of Model from the variable metadata passed to the signature.
+
+When the dynamic keyword is used, the runtime directed to use reflection at runtime to determine the specific type of 
+Model from the variable metadata passed to the signature.
+
 MethodThatNeedsToKnowT Result: Success! The type of T was found to be a specific type: DynamicDispatchDemo.SpecificType
 
-Example 2: Not Casting to dynamic.
-If we don't cast the argument to (dynamic), the runtime does not use reflection. Below is an exception caused by the methods inability to infer the type of Model.
+-----------
 
-Unhandled exception. System.Exception: MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should be ModelA, but was DynamicDispatchDemo.IHaveSomeGeneralProperty
+Example 2: Not Casting to dynamic.
+
+If we don't cast the argument to (dynamic), the runtime does not use reflection. 
+Below is an exception caused by the methods inability to infer the type of Model.
+
+Unhandled exception. System.Exception: MethodThatNeedsToKnowT Result: Fail D: The type of T wasn't specific enough. It should 
+be ModelA, but was DynamicDispatchDemo.IHaveSomeGeneralProperty
 ```
 
