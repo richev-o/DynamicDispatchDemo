@@ -2,6 +2,8 @@
 
 Dynamic dispatch is useful in situations where we need to provide extra information about a type at runtime.
 
+From Wikipedia: In computer science, dynamic dispatch is the process of selecting which implementation of a polymorphic operation (method or function) to call at run time.
+
 This project provides a working example of how a unspecific type can make its way to the signature of a polymorphic function that requires knowledge of the specific type of the variable (specified generically as `T`) passed via its signature.
 
 `SomeClass` contains a property that is typed as an unspecific interface. This satisifies the compiler. Later this property is passed to a polymorphic method (`MethodThatNeedsToKnowT`) that requires that the specific type at runtime be made availe at some point up the call stack. Since we place a constraint on the generic `T` of the polymorphic function `MethodThatNeedsToKnowT`, the compiler is satisfied. (The compiler would indeed be satisfied without this constraint, however we as engineers would not be satisfied!)
