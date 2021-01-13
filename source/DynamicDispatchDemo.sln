@@ -1,6 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeywordDemo", "DynamicKeywordDemo\DynamicKeywordDemo.csproj", "{D9E7D64A-2183-4FE9-A45A-138E63D77CBF}"
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicKeywordDemo", "DynamicKeywordDemo\DynamicKeywordDemo.csproj", "{D9E7D64A-2183-4FE9-A45A-138E63D77CBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicKeywordDemo.Tests", "DynamicKeywordDemo.Tests\DynamicKeywordDemo.Tests.csproj", "{AE9EECFD-88AE-488D-9C30-4CB1CE0E7FC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +17,15 @@ Global
 		{D9E7D64A-2183-4FE9-A45A-138E63D77CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E7D64A-2183-4FE9-A45A-138E63D77CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E7D64A-2183-4FE9-A45A-138E63D77CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE9EECFD-88AE-488D-9C30-4CB1CE0E7FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE9EECFD-88AE-488D-9C30-4CB1CE0E7FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE9EECFD-88AE-488D-9C30-4CB1CE0E7FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE9EECFD-88AE-488D-9C30-4CB1CE0E7FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99E5EF7E-451E-4312-B41D-C4DBC370E4FB}
 	EndGlobalSection
 EndGlobal
